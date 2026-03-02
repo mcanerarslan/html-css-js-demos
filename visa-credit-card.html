@@ -9,9 +9,13 @@
             min-height: 100vh;
             background: linear-gradient(to top right, white, gray);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 30px;
         }
+
+        /* Credit Card*/
 
         .cards {
             display: flex;
@@ -19,10 +23,11 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
+            flex-direction: row;
         }
 
-        #visa-card-front,
-        #visa-card-back {
+        #card-front,
+        #card-back {
             position: relative;
             height: 300px;
             width: 500px;
@@ -30,14 +35,14 @@
             background: black;
         }
 
-        #visa-card-front {
-            box-shadow: 20px -15px 30px red;
+        #card-front,
+        #card-back {
+            box-shadow: 30px -10px 20px rgb(36, 36, 36);
         }
 
-        #visa-card-back {
-            box-shadow: 20px -15px 30px yellow;
-        }
+        /* Credit Card End*/
 
+        /* Credit Card Front Page*/
         #thread {
             height: 40px;
             width: 60px;
@@ -80,6 +85,7 @@
             color: white;
             font-size: 18px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: lighter;
             position: absolute;
             top: 190px;
             left: 50px;
@@ -91,13 +97,50 @@
             position: absolute;
             top: 200px;
             left: 50px;
-            word-spacing: 7px;
+            word-spacing: 5px;
+            font-style: italic;
         }
 
-        #card-number p:hover,
-        #owner h1:hover {
-            color: yellow;
+        #valid-time p {
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            top: 185px;
+            right: 75px;
+            word-spacing: 7px;
+            font-weight: bold;
         }
+
+        #card-info {
+            color: white;
+        }
+
+        #card-info h1 {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            color: white;
+        }
+
+        #card-info p {
+            position: absolute;
+            left: 50px;
+            top: 60px;
+            color: white;
+        }
+
+        #card-info h2 {
+            position: absolute;
+            left: 420px;
+            top: 130px;
+            color: white;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            opacity: 30%;
+        }
+
+        /* Credit Card Back Page*/
 
         #card-secure-number p {
             background-color: white;
@@ -122,12 +165,89 @@
             position: absolute;
             top: 50px;
         }
+
+
+        .payment {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background-color: rgb(36, 36, 36);
+            border-radius: 20px;
+            padding: 15px;
+            width: 500px;
+            border-style: solid;
+        }
+
+        #payment-name,
+        #payment-surname,
+        #payment-email,
+        #payment-phone,
+        #payment-cardId,
+        #payment-secure,
+        #payment-validId {
+            color: white;
+            margin: 5px 10px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 5px;
+            background-color: rgb(36, 36, 36);
+        }
+
+        input::placeholder {
+            font-weight: bold;
+            opacity: 0.5;
+            color: white;
+        }
+
+        .payment input[type=submit],
+        input[type=reset] {
+            height: 25px;
+            min-width: 30px;
+            font-weight: bold;
+            color: rgb(36, 36, 36);
+            border-color: white;
+            border-width: 1px;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+
+        /*Hovers*/
+        #card-number p:hover,
+        #owner h1:hover,
+        #valid-time p:hover {
+            color: yellow;
+        }
+
+        #card-front:hover,
+        #card-back:hover {
+            border-style: solid solid none none;
+            border-color: red;
+            border-width: 2px;
+        }
+
+        #card-front:hover,
+        #card-back:hover {
+            box-shadow: 30px -10px 20px red;
+        }
+
+        .payment input[type=submit]:hover,
+        input[type=reset]:hover {
+            font-weight: bold;
+            color: white;
+            border-color: white;
+            border-width: 1px;
+            border-radius: 5px;
+            background-color: rgb(36, 36, 36);
+
+        }
+
+        /* Hovers End*/
     </style>
 </head>
 
 <body id="bg">
     <div class="cards">
-        <div id="visa-card-front">
+        <div id="card-front">
             <div id="circle-red"></div>
             <div id="circle-yellow"></div>
             <div id="thread"></div>
@@ -137,13 +257,63 @@
             <div id="card-number">
                 <p>5244 2342 5122 6323 6892</p>
             </div>
+            <div id="valid-time">
+                <p>07/33</p>
+            </div>
+            <div id="card-info">
+                <h1>Bank Name</h1>
+                <p>Credit Card</p>
+                <h2>MasterCard</h2>
+            </div>
         </div>
-        <div id="visa-card-back">
+        <div id="card-back">
             <div id="card-secure-number">
                 <p>123</p>
             </div>
             <div id="magnetic"></div>
         </div>
+    </div>
+    <div class="payment">
+        <form id="payment-form" autocomplete="on">
+            <table> 
+            <tr>
+                <td>
+                    <label>Name:</label><input type="text" id="payment-name" placeholder="Name" required>
+                </td>
+                <td>
+                    <label>Surname:</label><input type="text" id="payment-surname" placeholder="Surname" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email:</label><input type="email" id="payment-email" placeholder="demo@local.com" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label>Phone:</label><input type="tel" id="payment-phone" placeholder="0555 555 55 55" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label>Card Id:</label><input type="number" id="payment-cardId" placeholder="5555 5555 5555 5555"
+                        size="25" required></td>
+
+                <td><label>Secure Id:</label><input type="number" id="payment-secure" placeholder="555" size="25"
+                        required></td>
+            </tr>
+            <tr>
+                <td><label>Valid Time:</label><input type="date" id="payment-validId" size="25" required></td>
+            </tr>
+            <tr>
+                <td><input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+
+        </form>
+
+        </form>
+
     </div>
 </body>
 
