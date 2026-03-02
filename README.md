@@ -1,4 +1,4 @@
 # html-css-js-demos
 
 ## Demos
-- [Visa credit card layout](visa-credit-card.html) — open this demo in your browser (e.g., via Live Server or `npx http-server`) to inspect the card layout and payment input.
+- [MasterCard credit card layout](https://mcanerarslan.github.io/html-css-js-demos/credit-card.html) — view the running demo and inspect the layout directly on GitHub Pages.
