@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <style>
+        #bg {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(to top right, white, gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cards {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #visa-card-front,
+        #visa-card-back {
+            position: relative;
+            height: 300px;
+            width: 500px;
+            border-radius: 40px;
+            background: black;
+        }
+
+        #visa-card-front {
+            box-shadow: 20px -15px 30px red;
+        }
+
+        #visa-card-back {
+            box-shadow: 20px -15px 30px yellow;
+        }
+
+        #thread {
+            height: 40px;
+            width: 60px;
+            border-style: dashed;
+            border-radius: 10px;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            border-color: darkgray;
+            background-color: gray;
+        }
+
+        #circle-red {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border-style: solid;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: red;
+            opacity: 80%;
+            z-index: 1;
+        }
+
+        #circle-yellow {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border-style: solid;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: yellow;
+            opacity: 100%;
+            z-index: 0;
+        }
+
+        #owner h1 {
+            color: white;
+            font-size: 18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            top: 190px;
+            left: 50px;
+        }
+
+        #card-number p {
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            word-spacing: 7px;
+        }
+
+        #card-number p:hover,
+        #owner h1:hover {
+            color: yellow;
+        }
+
+        #card-secure-number p {
+            background-color: white;
+            border-radius: 4px;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            height: 25px;
+            width: 50px;
+            position: relative;
+            top: 100px;
+            left: 375px;
+            text-align: center;
+            padding-top: 8px;
+            font-weight: bold;
+        }
+
+        #magnetic {
+            background-color: gray;
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body id="bg">
+    <div class="cards">
+        <div id="visa-card-front">
+            <div id="circle-red"></div>
+            <div id="circle-yellow"></div>
+            <div id="thread"></div>
+            <div id="owner">
+                <h1>İsmail Can Oruç</h1>
+            </div>
+            <div id="card-number">
+                <p>5244 2342 5122 6323 6892</p>
+            </div>
+        </div>
+        <div id="visa-card-back">
+            <div id="card-secure-number">
+                <p>123</p>
+            </div>
+            <div id="magnetic"></div>
+        </div>
+    </div>
+</body>
+
+</html>
