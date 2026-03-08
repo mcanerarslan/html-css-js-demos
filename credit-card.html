@@ -141,6 +141,16 @@
         }
 
         /* Credit Card Back Page*/
+        #card-text p {
+            color: gray;
+            font-size: 8px;
+            opacity: 70%;
+            position: absolute;
+            left: 75px;
+            top: 160px;
+            width: 350px;
+            word-spacing: 3px;
+        }
 
         #card-secure-number p {
             background-color: white;
@@ -148,14 +158,16 @@
             color: black;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 12px;
-            height: 25px;
+            height: 35px;
             width: 50px;
-            position: relative;
-            top: 100px;
-            left: 375px;
-            text-align: center;
-            padding-top: 8px;
+            position: absolute;
+            top: 108px;
+            right: 75px;
             font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
         }
 
         #magnetic {
@@ -166,14 +178,28 @@
             top: 50px;
         }
 
+        #magnetic2 {
+            background-color: goldenrod;
+            border-color: darkgoldenrod;
+            border-style: dashed;
+            border-width: 2px;
+            width: 310px;
+            height: 31px;
+            position: absolute;
+            top: 120px;
+            left: 75px;
+            z-index: 1;
+        }
+
 
         .payment {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: white;
             background-color: rgb(36, 36, 36);
             border-radius: 20px;
-            padding: 15px;
+            padding: 25px;
             width: 500px;
+
             border-style: solid;
         }
 
@@ -235,10 +261,16 @@
             font-weight: bold;
             color: white;
             border-color: white;
-            border-width: 1px;
+            border-width: 2px;
             border-radius: 5px;
             background-color: rgb(36, 36, 36);
 
+        }
+
+        .payment input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 1;
+            cursor: pointer;
         }
 
         /* Hovers End*/
@@ -267,50 +299,56 @@
             </div>
         </div>
         <div id="card-back">
+            <div id="card-text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, blanditiis voluptatibus provident
+                    perferendis reprehenderit eius sit fuga dolorem assumenda est rem sint magni fugiat facere esse nam
+                    officiis suscipit vel? Lorem ipsum, dolor sit amet consectetur adipisicing elit. In laudantium
+                    necessitatibus officiis.</p>
+            </div>
             <div id="card-secure-number">
                 <p>123</p>
             </div>
             <div id="magnetic"></div>
+            <div id="magnetic2"></div>
         </div>
     </div>
     <div class="payment">
         <form id="payment-form" autocomplete="on">
-            <table> 
-            <tr>
-                <td>
-                    <label>Name:</label><input type="text" id="payment-name" placeholder="Name" required>
-                </td>
-                <td>
-                    <label>Surname:</label><input type="text" id="payment-surname" placeholder="Surname" required>
-                </td>
-            </tr>
-            <tr>
-                <td><label>Email:</label><input type="email" id="payment-email" placeholder="demo@local.com" required>
-                </td>
+            <table>
+                <tr>
+                    <td>
+                        <label>Name:</label><input type="text" id="payment-name" placeholder="Name" required>
+                    </td>
+                    <td>
+                        <label>Surname:</label><input type="text" id="payment-surname" placeholder="Surname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Email:</label><input type="email" id="payment-email" placeholder="demo@local.com"
+                            required>
+                    </td>
 
-            </tr>
-            <tr>
-                <td><label>Phone:</label><input type="tel" id="payment-phone" placeholder="0555 555 55 55" required>
-                </td>
+                </tr>
+                <tr>
+                    <td><label>Phone:</label><input type="tel" id="payment-phone" placeholder="0555 555 55 55" required>
+                    </td>
 
-            </tr>
-            <tr>
-                <td><label>Card Id:</label><input type="number" id="payment-cardId" placeholder="5555 5555 5555 5555"
-                        size="25" required></td>
+                </tr>
+                <tr>
+                    <td><label>Card Id:</label><input type="number" id="payment-cardId"
+                            placeholder="5555 5555 5555 5555" size="25" required></td>
 
-                <td><label>Secure Id:</label><input type="number" id="payment-secure" placeholder="555" size="25"
-                        required></td>
-            </tr>
-            <tr>
-                <td><label>Valid Time:</label><input type="date" id="payment-validId" size="25" required></td>
-            </tr>
-            <tr>
-                <td><input type="submit">
-                    <input type="reset">
-                </td>
-            </tr>
-
-        </form>
+                    <td><label>Secure Id:</label><input type="number" id="payment-secure" placeholder="555" size="25"
+                            required></td>
+                </tr>
+                <tr>
+                    <td><label>Valid Time:</label><input type="date" id="payment-validId" size="25" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit">
+                        <input type="reset">
+                    </td>
+                </tr>
 
         </form>
 

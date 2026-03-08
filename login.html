@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <style>
+        body {
+            background-color: #362F4F;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #login-container {
+            width: 800px;
+            height: 500px;
+            border-radius: 30px;
+            background-color: black;
+            background: linear-gradient(to top left, #E4FF30, white);
+            z-index: 0;
+            display: flex;
+        }
+
+        #login-container:hover {
+            box-shadow: 5px 5px 100px #4D2FB2;
+        }
+
+        #login-photo {
+            width: 400px;
+            height: 500px;
+            border-radius: 30px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            background-image: url("https://cdn.muhiku.com/blog/wp-content/uploads/2024/06/manzara-sozleri.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #login-layout {
+            width: 400px;
+            height: 500px;
+            /* border-style: solid;
+            border-color: red;
+            border-width: 2px; */
+            top: -2px;
+            left: -1px;
+            border-radius: 0px 30px 30px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login-layout h1 {
+            margin: 0;
+            color: #5B23FF;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #login-layout h4 {
+            margin: 8px 0 30px 0;
+            color: gray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        #login-layout input {
+            width: 220px;
+            padding: 10px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #login-layout input:hover {
+            box-shadow: 5px 5px 10px #0C2C55;
+        }
+
+        #login-layout button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            border: 1px solid blue;
+            border-radius: 5px;
+            background: linear-gradient(to bottom right, #008BFF, #008BFF);
+            margin: 10px 0px 5px 0px;
+            width: 220px;
+            height: 35px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #login-layout button:hover {
+            box-shadow: 5px 5px 10px #0C2C55;
+        }
+
+        .ri-google-fill,
+        .ri-github-fill {
+            color: white;
+            padding-right: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-container">
+        <div id="login-photo">
+        </div>
+        <div id="login-layout">
+            <h1>Welcome Back!</h1>
+            <h4>Sign in to your account</h4>
+            <input type="text" id="username" placeholder="username" required><br>
+            <input type="password" id="password" placeholder="************" required>
+            <button>Login</button>
+            <button><i class="ri-google-fill"></i> Continue with Gmail</button>
+            <button><i class="ri-github-fill"></i> Continue with GitHub</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

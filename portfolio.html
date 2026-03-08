@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <title>My Portfolio WebPage</title>
+
+    <style>
+        :root {
+            --page-bg: #FF7070;
+            --panel-bg: #EB4C4C;
+            --text-soft: #FFEDC7;
+            --text-bright: #FFF7CD;
+            --border-dark: #EB4C4C;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--page-bg);
+            color: var(--text-soft);
+            font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        }
+
+        header {
+            background-color: var(--panel-bg);
+            margin: 0 auto;
+            padding: 10px 20px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        nav {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        nav a:link,
+        nav a:visited {
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            color: var(--text-soft);
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--page-bg);
+            background-color: var(--text-soft);
+        }
+
+        .section-title {
+            color: var(--text-bright);
+            font-size: 50px;
+        }
+
+        #pages {
+            min-height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem 1rem 3rem;
+        }
+
+        section {
+            border: 1px solid var(--border-dark);
+            border-radius: 30px;
+            min-height: 500px;
+            width: min(90vw, 800px);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            gap: 1rem;
+        }
+
+        footer {
+            background-color: var(--panel-bg);
+            padding: 1.5rem 0;
+            color: var(--text-soft);
+        }
+
+        #social-media {
+            display: flex;
+            justify-content: center;
+            gap: 0.85rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--page-bg);
+            border: 2px solid var(--text-soft);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .social-link:visited,
+        .social-link:link {
+            color: var(--text-soft);
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            background-color: #FF4F4F;
+            box-shadow: 2px 2px 10px var(--text-bright);
+        }
+
+        #footer-text {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>M. Caner Arslan</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#skill">Skill</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div id="pages">
+        <section id="home">
+            <h1 class="section-title">I am Web Developer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit libero earum tempora consequuntur ducimus
+                minima fugiat repellat ex! Blanditiis exercitationem laborum, ullam totam adipisci explicabo tenetur
+                fugit
+                ipsam earum quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit, magni
+                ipsa repellat accusamus tenetur nemo nobis, sed non quaerat blanditiis distinctio, deleniti odit cum
+                maxime
+                saepe rem eaque culpa!</p>
+        </section>
+        <section id="about">
+            <h1 class="section-title">About Me</h1>
+            <p>Hello, I’m Mahmut Caner Arslan. I study Computer Engineering and I am passionate about web development,
+                user
+                interface design, and real-world digital products. I enjoy transforming ideas into clean, functional,
+                and
+                visually strong websites.
+
+                My background combines technology and entrepreneurship. While improving myself in software development,
+                I
+                also work on digital projects in the real estate industry. This gives me a practical perspective on
+                building
+                systems that are not only visually appealing but also useful, fast, and business-oriented.
+
+                I am especially interested in frontend development, responsive design, modern JavaScript frameworks, and
+                creating professional web experiences that strengthen brands online.</p>
+
+        </section>
+        <section id="skill">
+            <h1 class="section-title">Skills</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, libero explicabo consectetur voluptatibus
+                ut illo adipisci ratione ab numquam, consequatur dolor et. Eum nihil repellendus inventore nesciunt
+                necessitatibus in assumenda!</p>
+        </section>
+        <section id="project">
+            <h1 class="section-title">Projects</h1>
+            <p>Project 1 — Real Estate Website Platform
+
+                Alt başlık:
+                Modern Real Estate Web Platform
+
+                Açıklama:
+                A real estate-focused website project designed to present property listings in a modern, professional,
+                and
+                SEO-friendly structure. The platform aims to improve listing visibility, user experience, and brand
+                trust
+                through clean design, multilingual presentation, and practical content management.
+
+                Teknolojiler:
+                React.js, Next.js, Tailwind CSS, Supabase</p>
+            <p>Project 2 — Portfolio & Business Web Interfaces
+
+                Alt başlık:
+                Responsive Web Interface Development
+
+                Açıklama:
+                A collection of responsive interface projects built to improve my frontend development skills. These
+                projects focus on layout systems, reusable components, modern styling, and mobile-friendly structures.
+
+                Teknolojiler:
+                HTML, CSS, JavaScript, Tailwind CSS
+            </p>
+        </section>
+        <section id="experience">
+            <h1 class="section-title">Experience</h1>
+            <p>Kurtköy Emlakçısı
+
+                Pozisyon:
+                Real Estate Consultant & Digital Project Contributor
+
+                Tarih:
+                Present
+
+                Açıklama:
+                Working on real estate marketing, listing presentation, client communication, and digital brand
+                development.
+                I also contribute to website structure, content planning, and digital visibility strategies for the
+                brand.
+            </p>
+        </section>
+        <section id="education">
+            <h1 class="section-title">Education</h1>
+            <p>Istanbul Okan University
+
+                Bölüm:
+                Computer Engineering
+
+                Durum:
+                Undergraduate Student
+
+                Açıklama:
+                Studying core subjects in software, programming, algorithms, and computer systems while building
+                practical
+                projects in web development and digital product creation.</p>
+        </section>
+        <section id="contact">
+            <h1 class="section-title">Contact</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum impedit veniam perspiciatis odit
+                doloremque exercitationem sed consectetur. Eveniet voluptatibus, placeat esse commodi molestiae impedit
+                vel corporis, repudiandae ullam quod et?</p>
+        </section>
+    </div>
+    <footer>
+
+        <div id="social-media">
+            <a href="#" class="social-link"><i class="ri-github-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-google-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-youtube-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+            <a href="#" class="social-link"><i class="ri-snapchat-fill"></i></a>
+            <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a>
+        </div>
+        <div id="footer-text">
+            <p>© 2026 Mahmut Caner Arslan. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
