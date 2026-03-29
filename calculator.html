@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            /*view height - cihazin ekran yuksekligi*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        .background {
+            background: radial-gradient(circle, #3A4150 0%, #2B2F3A 45%, #1C1F26 100%);
+        }
+
+        #calculator-frame {
+            width: 500px;
+            height: 750px;
+            padding: 25px;
+            margin: 50px;
+            background-color: #1D1E1F;
+            border: 2px solid black;
+            border-radius: 40px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: 140px repeat(5, 100px);
+            gap: 10px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .calculator-buttons,
+        .calculator-top-buttons,
+        .calculator-operators {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 1px solid gray;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .calculator-buttons {
+            background-color: #474747;
+            box-shadow: 1px 1px 10px rgb(108, 108, 108);
+        }
+
+        .calculator-top-buttons {
+            background-color: #757575;
+            box-shadow: 1px 1px 10px darkgray;
+        }
+
+        .calculator-operators {
+            background-color: #FF9200;
+            box-shadow: 1px 1px 10px darkorange;
+        }
+
+        .calculator-buttons:hover,
+        .calculator-top-buttons:hover,
+        .calculator-operators:hover {
+            border: 3px solid white;
+
+        }
+
+        #conclusion {
+            grid-column: 1 / 5;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 20px;
+            font-size: 60px;
+            border-radius: 20px;
+            color: white;
+            gap: 50px;
+        }
+    </style>
+</head>
+
+<body class="background">
+
+    <div id="calculator-frame">
+        <div id="conclusion">123</div>
+        <!-- <i class="ri-history-fill"></i> -->
+        <div class="calculator-top-buttons"><i class="ri-delete-back-2-line"></i></div>
+        <div class="calculator-top-buttons">AC</div>
+        <div class="calculator-top-buttons">%</div>
+        <div class="calculator-operators"><i class="ri-divide-line"></i></div>
+
+        <div class="calculator-buttons">7</div>
+        <div class="calculator-buttons">8</div>
+        <div class="calculator-buttons">9</div>
+        <div class="calculator-operators"><i class="ri-close-large-line"></i></div>
+
+        <div class="calculator-buttons">4</div>
+        <div class="calculator-buttons">5</div>
+        <div class="calculator-buttons">6</div>
+        <div class="calculator-operators"><i class="ri-subtract-fill"></i></div>
+
+        <div class="calculator-buttons">1</div>
+        <div class="calculator-buttons">2</div>
+        <div class="calculator-buttons">3</div>
+        <div class="calculator-operators"><i class="ri-add-fill"></i></div>
+
+        <div class="calculator-buttons"><i class="ri-increase-decrease-line"></i></div>
+        <div class="calculator-buttons">0</div>
+        <div class="calculator-buttons">,</div>
+        <div class="calculator-operators"><i class="ri-equal-line"></i></div>
+
+    </div>
+</body>
+
+</html>
